@@ -7,19 +7,19 @@
   
   <title>浅析逻辑代数、命题逻辑、一阶逻辑、高阶逻辑和数理逻辑 | 辰述 - 请您听我说</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言   此文是在本人学习完离散数学中的数理逻辑部分后，对标题中各部分之间的联系存在很大的疑惑。特此进行总结，水平有限，如有错误，欢迎指正。">
+  <meta name="description" content="前言   此文是在本人学习完离散数学中的数理逻辑部分后，对标题中各部分之间的联系存在很大的疑惑。特此进行总结，水平有限，如有错误，欢迎指正。 从逻辑代数开始    逻辑代数是一种用于描述客观事物逻辑关系的数学方法，由英国科学家乔治·布尔(George·Boole)于19世纪中叶提出，因而又称布尔代数。   所谓逻辑代数，就是把逻辑推理过程代数化，即把逻辑推理过程符号化。 从逻辑代数到命题逻辑">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅析逻辑代数、命题逻辑、一阶逻辑、高阶逻辑和数理逻辑">
 <meta property="og:url" content="http://chenshu.xyz/posts/undefined/index.html">
 <meta property="og:site_name" content="辰述 - 请您听我说">
-<meta property="og:description" content="前言   此文是在本人学习完离散数学中的数理逻辑部分后，对标题中各部分之间的联系存在很大的疑惑。特此进行总结，水平有限，如有错误，欢迎指正。">
+<meta property="og:description" content="前言   此文是在本人学习完离散数学中的数理逻辑部分后，对标题中各部分之间的联系存在很大的疑惑。特此进行总结，水平有限，如有错误，欢迎指正。 从逻辑代数开始    逻辑代数是一种用于描述客观事物逻辑关系的数学方法，由英国科学家乔治·布尔(George·Boole)于19世纪中叶提出，因而又称布尔代数。   所谓逻辑代数，就是把逻辑推理过程代数化，即把逻辑推理过程符号化。 从逻辑代数到命题逻辑">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://chenshu-1301542311.cos.ap-chengdu.myqcloud.com/typora/%E4%B9%94%E6%B2%BB%C2%B7%E5%B8%83%E5%B0%94(George%C2%B7Boole).jpg">
 <meta property="og:image" content="https://chenshu-1301542311.cos.ap-chengdu.myqcloud.com/typora/%E8%8E%B1%E5%B8%83%E5%B0%BC%E8%8C%A8%E4%BB%8B%E7%BB%8D(1).jpg">
 <meta property="og:image" content="https://chenshu-1301542311.cos.ap-chengdu.myqcloud.com/typora/%E8%8E%B1%E5%B8%83%E5%B0%BC%E8%8C%A8%E4%BB%8B%E7%BB%8D(2).jpg">
 <meta property="og:image" content="https://chenshu-1301542311.cos.ap-chengdu.myqcloud.com/typora/%E8%8E%B1%E5%B8%83%E5%B0%BC%E8%8C%A8%E4%BB%8B%E7%BB%8D(3).jpg">
 <meta property="article:published_time" content="2020-04-05T00:33:54.348Z">
-<meta property="article:modified_time" content="2020-04-06T10:25:48.461Z">
+<meta property="article:modified_time" content="2020-04-09T13:32:42.658Z">
 <meta property="article:author" content="Xiaochen">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://chenshu-1301542311.cos.ap-chengdu.myqcloud.com/typora/%E4%B9%94%E6%B2%BB%C2%B7%E5%B8%83%E5%B0%94(George%C2%B7Boole).jpg">
@@ -120,7 +120,7 @@ if (isWX) {
 </header>
 
     <div class="outer">
-      <section id="main"><article id="post-一阶逻辑、高阶逻辑和命题逻辑" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-浅析一阶逻辑、高阶逻辑和命题逻辑" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <h3 href="/posts/undefined/" class="article-date">
   <time datetime="2020-04-05T00:33:54.348Z" itemprop="datePublished">2020-04-05</time>
@@ -151,7 +151,6 @@ if (isWX) {
         
         <h2 id="前言">前言</h2>
 <p>  此文是在本人学习完离散数学中的数理逻辑部分后，对标题中各部分之间的联系存在很大的疑惑。特此进行总结，水平有限，如有错误，欢迎指正。</p>
-<a id="more"></a>
 <h2 id="从逻辑代数开始">从逻辑代数开始</h2>
 <p><img src="https://chenshu-1301542311.cos.ap-chengdu.myqcloud.com/typora/%E4%B9%94%E6%B2%BB%C2%B7%E5%B8%83%E5%B0%94(George%C2%B7Boole).jpg" alt="George·Boole"></p>
 <p>  逻辑代数是一种用于描述客观事物逻辑关系的数学方法，由英国科学家乔治·布尔(George·Boole)于19世纪中叶提出，因而又称<u>布尔代数</u>。</p>
@@ -190,6 +189,13 @@ if (isWX) {
 <img width=500 src='https://chenshu-1301542311.cos.ap-chengdu.myqcloud.com/typora/莱布尼茨介绍(1).jpg'/>
 <img width=500 src='https://chenshu-1301542311.cos.ap-chengdu.myqcloud.com/typora/莱布尼茨介绍(2).jpg'/>
 <img width=500 src='https://chenshu-1301542311.cos.ap-chengdu.myqcloud.com/typora/莱布尼茨介绍(3).jpg'/>
+<h2 id="感谢文章">感谢文章</h2>
+<ul>
+<li><a href="https://wenku.baidu.com/view/7a119fe44afe04a1b071de63.html?from=search" target="_blank" rel="noopener">《数学是什么》</a></li>
+<li><a href="https://wenwen.sogou.com/z/q790010406.htm" target="_blank" rel="noopener">《逻辑学是数学的基础吗？》</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_539cd8820100mgnc.html" target="_blank" rel="noopener">《逻辑代数、布尔代数、命题逻辑、数理逻辑》</a></li>
+<li><a href="https://www.zhihu.com/question/22915503/answer/151477106" target="_blank" rel="noopener">《一阶逻辑和高阶逻辑的区别，能不能具象一点说明？》</a></li>
+</ul>
 <h2 id="写在最后">写在最后</h2>
 <p>  感谢您能够读完这篇文章，本文只是浅析了这几个概念，并不够深入。但我觉得随着不断学习，有些问题的答案总会浮出水面，所以此文我会不断进行补充。</p>
 <p>  本人是名大二在校生，学习软件专业，所以对数学的理解并不是太深入。但如果你跟我一样是学软件的，那么我建议你了解到这里就可以了。不过，我仍然鼓励你去探索你心中的疑惑。</p>
@@ -200,7 +206,7 @@ if (isWX) {
     <footer class="article-footer">
       <div class="article-footer-content">
         
-        <a data-url="http://chenshu.xyz/posts/undefined/" data-id="ck8obxjac0000motxa9vg4jb5" class="article-share-link">分享到</a>
+        <a data-url="http://chenshu.xyz/posts/undefined/" data-id="ck8ssy1et0000h0txbbu56gsf" class="article-share-link">分享到</a>
         
       </div>
     </footer>
