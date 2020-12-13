@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     
-    <title>晓辰的 Wiki 站点</title>
+    <title>分类: 操作系统 | 晓辰的 Wiki 站点</title>
     
     
         <meta name="keywords" content="晓辰的 Wiki 站点">
@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta property="og:type" content="website">
 <meta property="og:title" content="晓辰的 Wiki 站点">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.html">
 <meta property="og:site_name" content="晓辰的 Wiki 站点">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="晓辰">
@@ -263,21 +263,24 @@
 </aside>
             
             <section id="main">
-        <article id="post-进程同步为什么不叫进程协调？" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
+<div class="timeline timeline-wrap">
+    <div class="timeline-row timeline-row-major">
+        <span class="node"><i class="fa fa-folder"></i></span>
+        <h1 class="title">操作系统</h1>
     </div>
+    
+        <div class="timeline-row">
+            <span class="node"></span>
+            <div class="content">
+                
+    
+        <h1 itemprop="name">
+            <a class="timeline-article-title" href="/wiki/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%8F%AB%E8%BF%9B%E7%A8%8B%E5%8D%8F%E8%B0%83%EF%BC%9F/">进程同步为什么不叫进程协调？</a>
+        </h1>
+    
 
-                        
-                        
+                <div class="article-meta">
+                    
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/wiki/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%8F%AB%E8%BF%9B%E7%A8%8B%E5%8D%8F%E8%B0%83%EF%BC%9F/">
@@ -286,158 +289,18 @@
     </div>
 
 
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                            <div class="article-meta-button">
-                                <a href="https://github.com/justifyx/chenshu.github.io/raw/master/source/_posts/进程同步为什么不叫进程协调？.md" target="_blank" rel="external nofollow noopener noreferrer"> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href="https://github.com/justifyx/chenshu.github.io/edit/master/source/_posts/进程同步为什么不叫进程协调？.md" target="_blank" rel="external nofollow noopener noreferrer"> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href="https://github.com/justifyx/chenshu.github.io/commits/master/source/_posts/进程同步为什么不叫进程协调？.md" target="_blank" rel="external nofollow noopener noreferrer"> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/wiki/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%8F%AB%E8%BF%9B%E7%A8%8B%E5%8D%8F%E8%B0%83%EF%BC%9F/">进程同步为什么不叫进程协调？</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
                     
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                
-                    
-                    <p></p><h2 id="前言">前言</h2>
-<p>今天刚学完进程同步机制，突然感觉书中说来说去的进程同步，到头来还是没说清为什么要进行同步？同步了个啥？只是给出了很多概念。我觉得进程同步问题所牵扯到的知识还真是不少，所以打算记录下来，顺便梳理一下我的思路。如有错误，欢迎指出。</p>
-<h2 id="1-进程同步概述">1. 进程同步概述</h2>
-<h3 id="1-1-什么是进程同步？">1.1 什么是进程同步？</h3>
-<p>这是百度词条给出的解释：在多道程序环境下，进程是并发执行的，不同进程之间存在着不同的相互制约关系。我倒觉得百度的解释还有些道理，其实最主要的就是这个<strong>相互制约关系</strong>，这点我们一会再说。</p>
-<p>
-                
-            
-        
-        
-            </p></div>   
-            <div class="article-more-link">
-                <a href="/wiki/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%8F%AB%E8%BF%9B%E7%A8%8B%E5%8D%8F%E8%B0%83%EF%BC%9F/#more">查看更多</a>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
-        <article id="post-浅析一阶逻辑、高阶逻辑和命题逻辑" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/">离散数学</a>
+        <a class="article-category-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
     </div>
 
-                        
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/%E6%B5%85%E6%9E%90%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E3%80%81%E9%AB%98%E9%98%B6%E9%80%BB%E8%BE%91%E5%92%8C%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/">
-            <time datetime="2020-12-05T14:19:40.725Z" itemprop="datePublished">2020-12-05</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                            <div class="article-meta-button">
-                                <a href="https://github.com/justifyx/chenshu.github.io/raw/master/source/_posts/浅析一阶逻辑、高阶逻辑和命题逻辑.md" target="_blank" rel="external nofollow noopener noreferrer"> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href="https://github.com/justifyx/chenshu.github.io/edit/master/source/_posts/浅析一阶逻辑、高阶逻辑和命题逻辑.md" target="_blank" rel="external nofollow noopener noreferrer"> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href="https://github.com/justifyx/chenshu.github.io/commits/master/source/_posts/浅析一阶逻辑、高阶逻辑和命题逻辑.md" target="_blank" rel="external nofollow noopener noreferrer"> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/wiki/%E6%B5%85%E6%9E%90%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E3%80%81%E9%AB%98%E9%98%B6%E9%80%BB%E8%BE%91%E5%92%8C%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/">浅析逻辑代数、命题逻辑、一阶逻辑、高阶逻辑和数理逻辑</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                <p></p><h2 id="前言">前言</h2>
-<p>此文是在本人学习完离散数学中的数理逻辑部分后，对标题中各部分之间的联系存在很大的疑惑。特此进行总结，水平有限，如有错误，欢迎指出。</p><p></p>
-            
-        
-        
-            </div>   
-            <div class="article-more-link">
-                <a href="/wiki/%E6%B5%85%E6%9E%90%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E3%80%81%E9%AB%98%E9%98%B6%E9%80%BB%E8%BE%91%E5%92%8C%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/#more">查看更多</a>
+                    
+                </div>
             </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
+        </div>
     
+</div>
 </section>
         </div>
         <footer id="footer">
