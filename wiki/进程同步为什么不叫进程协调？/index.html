@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     
-    <title>进程同步为什么不叫进程协调？ | 晓辰的 Wiki 站点</title>
+    <title>进程同步为什么不叫进程协调？ | 辰述 - 晓辰的 Wiki 站点</title>
     
     
         <meta name="keywords" content="进程同步为什么不叫进程协调？">
@@ -13,17 +13,17 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="进程同步为什么不叫进程协调？">
 <meta property="og:url" content="http://yoursite.com/wiki/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%8F%AB%E8%BF%9B%E7%A8%8B%E5%8D%8F%E8%B0%83%EF%BC%9F/index.html">
-<meta property="og:site_name" content="晓辰的 Wiki 站点">
+<meta property="og:site_name" content="辰述 - 晓辰的 Wiki 站点">
 <meta property="og:description" content="前言今天刚学完进程同步机制，突然感觉书中说来说去的进程同步，到头来还是没说清为什么要进行同步？同步了个啥？只是给出了很多概念。我觉得进程同步问题所牵扯到的知识还真是不少，所以打算记录下来，顺便梳理一下我的思路。如有错误，欢迎指出。 1. 进程同步概述1.1 什么是进程同步？这是百度词条给出的解释：在多道程序环境下，进程是并发执行的，不同进程之间存在着不同的相互制约关系。我倒觉得百度的解释还有些道理">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-10-25T14:36:09.000Z">
-<meta property="article:modified_time" content="2020-12-14T15:04:13.692Z">
+<meta property="article:modified_time" content="2020-12-17T12:50:52.718Z">
 <meta property="article:author" content="晓辰">
 <meta name="twitter:card" content="summary">
     
 
     
-        <link rel="alternate" href="/atom.xml" title="晓辰的 Wiki 站点" type="application/atom+xml">
+        <link rel="alternate" href="/atom.xml" title="辰述 - 晓辰的 Wiki 站点" type="application/atom+xml">
     
 
     
@@ -77,7 +77,7 @@
         <div class="outer">
             <a href="/" id="logo">
                 <i class="logo"></i>
-                <span class="site-title">晓辰的 Wiki 站点</span>
+                <span class="site-title">辰述 - 晓辰的 Wiki 站点</span>
             </a>
             <nav id="main-nav">
                 
@@ -89,7 +89,9 @@
                 
                     <a class="main-nav-link" href="/tags">标签</a>
                 
-                    <a class="main-nav-link" href="/about">关于</a>
+                    <a class="main-nav-link" href="https://www.cnblogs.com/chenshu/" target="_blank" rel="external nofollow noopener noreferrer">博客园</a>
+                
+                    <a class="main-nav-link" href="/about">关于我</a>
                 
             </nav>
             
@@ -146,7 +148,9 @@
                 
                     <td><a class="main-nav-link" href="/tags">标签</a></td>
                 
-                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                    <td><a class="main-nav-link" href="https://www.cnblogs.com/chenshu/" target="_blank" rel="external nofollow noopener noreferrer">博客园</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于我</a></td>
                 
                 <td>
                     
@@ -322,7 +326,7 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">文章目录</strong>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-进程同步概述"><span class="toc-number">2.</span> <span class="toc-text">1. 进程同步概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-什么是进程同步？"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 什么是进程同步？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-进程之间的各种相互制约关系"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 进程之间的各种相互制约关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-怎么实现进程同步？"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 怎么实现进程同步？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-一些基本概念"><span class="toc-number">3.</span> <span class="toc-text">2. 一些基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-在进程同步中，临界资源不单纯指临界资源"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 在进程同步中，临界资源不单纯指临界资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-建立临界区：硬件-软件临界资源共享解决方案"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 建立临界区：硬件&#x2F;软件临界资源共享解决方案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-浅谈进程同步机制"><span class="toc-number">4.</span> <span class="toc-text">3. 浅谈进程同步机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-面临的主要问题"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 面临的主要问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-硬件同步机制"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 硬件同步机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-信号量机制"><span class="toc-number">4.3.</span> <span class="toc-text">3.3 信号量机制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后记"><span class="toc-number">5.</span> <span class="toc-text">后记</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-进程同步概述"><span class="toc-text">1. 进程同步概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-什么是进程同步？"><span class="toc-text">1.1 什么是进程同步？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-进程之间的各种相互制约关系"><span class="toc-text">1.2 进程之间的各种相互制约关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-怎么实现进程同步？"><span class="toc-text">1.3 怎么实现进程同步？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-一些基本概念"><span class="toc-text">2. 一些基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-在进程同步中，临界资源不单纯指临界资源"><span class="toc-text">2.1 在进程同步中，临界资源不单纯指临界资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-建立临界区：硬件-软件临界资源共享解决方案"><span class="toc-text">2.2 建立临界区：硬件&#x2F;软件临界资源共享解决方案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-浅谈进程同步机制"><span class="toc-text">3. 浅谈进程同步机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-面临的主要问题"><span class="toc-text">3.1 面临的主要问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-硬件同步机制"><span class="toc-text">3.2 硬件同步机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-信号量机制"><span class="toc-text">3.3 信号量机制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后记"><span class="toc-text">后记</span></a></li></ol>
                 </div>
             
         

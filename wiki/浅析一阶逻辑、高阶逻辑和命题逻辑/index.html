@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     
-    <title>浅析逻辑代数、命题逻辑、一阶逻辑、高阶逻辑和数理逻辑 | 晓辰的 Wiki 站点</title>
+    <title>浅析逻辑代数、命题逻辑、一阶逻辑、高阶逻辑和数理逻辑 | 辰述 - 晓辰的 Wiki 站点</title>
     
     
         <meta name="keywords" content="浅析逻辑代数、命题逻辑、一阶逻辑、高阶逻辑和数理逻辑">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅析逻辑代数、命题逻辑、一阶逻辑、高阶逻辑和数理逻辑">
 <meta property="og:url" content="http://yoursite.com/wiki/%E6%B5%85%E6%9E%90%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E3%80%81%E9%AB%98%E9%98%B6%E9%80%BB%E8%BE%91%E5%92%8C%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/index.html">
-<meta property="og:site_name" content="晓辰的 Wiki 站点">
+<meta property="og:site_name" content="辰述 - 晓辰的 Wiki 站点">
 <meta property="og:description" content="前言此文是在本人学习完离散数学中的数理逻辑部分后，对标题中各部分之间的联系存在很大的疑惑。特此进行总结，水平有限，如有错误，欢迎指出。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://chenshu-1301542311.cos.ap-chengdu.myqcloud.com/typora/%E4%B9%94%E6%B2%BB%C2%B7%E5%B8%83%E5%B0%94(George%C2%B7Boole).jpg">
@@ -21,14 +21,14 @@
 <meta property="og:image" content="https://chenshu-1301542311.cos.ap-chengdu.myqcloud.com/typora/%E8%8E%B1%E5%B8%83%E5%B0%BC%E8%8C%A8%E4%BB%8B%E7%BB%8D(2).jpg">
 <meta property="og:image" content="https://chenshu-1301542311.cos.ap-chengdu.myqcloud.com/typora/%E8%8E%B1%E5%B8%83%E5%B0%BC%E8%8C%A8%E4%BB%8B%E7%BB%8D(3).jpg">
 <meta property="article:published_time" content="2020-04-11T17:28:33.000Z">
-<meta property="article:modified_time" content="2020-12-13T14:35:24.050Z">
+<meta property="article:modified_time" content="2020-12-17T12:50:53.383Z">
 <meta property="article:author" content="晓辰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://chenshu-1301542311.cos.ap-chengdu.myqcloud.com/typora/%E4%B9%94%E6%B2%BB%C2%B7%E5%B8%83%E5%B0%94(George%C2%B7Boole).jpg">
     
 
     
-        <link rel="alternate" href="/atom.xml" title="晓辰的 Wiki 站点" type="application/atom+xml">
+        <link rel="alternate" href="/atom.xml" title="辰述 - 晓辰的 Wiki 站点" type="application/atom+xml">
     
 
     
@@ -82,7 +82,7 @@
         <div class="outer">
             <a href="/" id="logo">
                 <i class="logo"></i>
-                <span class="site-title">晓辰的 Wiki 站点</span>
+                <span class="site-title">辰述 - 晓辰的 Wiki 站点</span>
             </a>
             <nav id="main-nav">
                 
@@ -94,7 +94,9 @@
                 
                     <a class="main-nav-link" href="/tags">标签</a>
                 
-                    <a class="main-nav-link" href="/about">关于</a>
+                    <a class="main-nav-link" href="https://www.cnblogs.com/chenshu/" target="_blank" rel="external nofollow noopener noreferrer">博客园</a>
+                
+                    <a class="main-nav-link" href="/about">关于我</a>
                 
             </nav>
             
@@ -151,7 +153,9 @@
                 
                     <td><a class="main-nav-link" href="/tags">标签</a></td>
                 
-                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                    <td><a class="main-nav-link" href="https://www.cnblogs.com/chenshu/" target="_blank" rel="external nofollow noopener noreferrer">博客园</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于我</a></td>
                 
                 <td>
                     
@@ -324,6 +328,11 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">文章目录</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-从逻辑代数开始"><span class="toc-text">1. 从逻辑代数开始</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-从逻辑代数到命题逻辑"><span class="toc-text">2. 从逻辑代数到命题逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-浅谈数理逻辑与数学和逻辑学"><span class="toc-text">2.1 浅谈数理逻辑与数学和逻辑学</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-命题逻辑的符号化思想"><span class="toc-text">2.2 命题逻辑的符号化思想</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-从命题逻辑到一阶逻辑"><span class="toc-text">3. 从命题逻辑到一阶逻辑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-从一阶逻辑到二阶、高阶逻辑"><span class="toc-text">4. 从一阶逻辑到二阶、高阶逻辑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-题外话"><span class="toc-text">5. 题外话</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-感谢文章"><span class="toc-text">6. 感谢文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后记"><span class="toc-text">后记</span></a></li></ol>
+                </div>
             
         
         
