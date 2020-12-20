@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-12-20T11:35:46.101Z</updated>
+  <updated>2020-12-20T11:10:54.794Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>浅推翻墙原理</title>
-    <link href="http://yoursite.com/wiki/%E6%B5%85%E6%8E%A8%E7%BF%BB%E5%A2%99%E5%8E%9F%E7%90%86/"/>
-    <id>http://yoursite.com/wiki/%E6%B5%85%E6%8E%A8%E7%BF%BB%E5%A2%99%E5%8E%9F%E7%90%86/</id>
-    <published>2020-11-22T12:55:23.000Z</published>
-    <updated>2020-12-20T11:35:46.101Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天上计算机网络课时，讲到了虚拟专用网络 VPN 和网络地址转换 NAT，其实一直很好奇那些“机场”是怎么为用户提供“翻墙”服务的。所以打算试着推测一下翻墙的原理，不知道对不对，但还是先记下来。</p><p>下面以出国为例，回国原理应该也一样。</p><p>首先，假设公司 A 向用户 a 提供翻墙业务，A 此时需要向 ISP 申请可用于海外通信的线路，然后构建虚拟专用网。这里要注意一点，a 购买了 A 的业务后，A 就把 a 当作是员工而不是客户了，因为 a, b, c 能使用 A 组建的虚拟专用网，而客户没有这种权限。</p><p>接着，如果 A 向 a 分发本地地址，可指派范围见课本 P185，当 a 向在海外的 d 发送数据时，需要先开启 VPN 软件，然后离他最近的路由器会对它要发送的数据进行加密，建立到公司 A 某一路由器的隧道，最后传到公司的本地网络中，这时数据还未到达海外，需要在公司的可与海外通信的网络上进行再次转发。</p><p>总之，当我们开启了 VPN 软件后，相当于在用公司的专用网络（即本地网络），并且这一专用网络中有可以与海外进行通信的路由器。</p><p>所以，一个机场到日本的一条线路就需要一个在日本的 NAT 路由器，它至少需要包含一个全球 IP 地址。</p><p>使用 NAPT 技术的 VPN 软件都提供有端口和 IP 地址，是为了更加有效地利用 NAT 路由器上的全球 IP 地址。至于怎么实现的，见课本 P 188 使用端口号的 NAT，这也是为什么机场提供的一些线路可以被上千人共用的原因。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;今天上计算机网络课时，讲到了虚拟专用网络 VPN 和网络地址转换 NAT，其实一直很好奇那些“机场”是怎么为用户提供“翻墙”服务的。所以打算试着推测一下翻墙的原理，不知道对不对，但还是先记下来。&lt;/p&gt;
-&lt;p&gt;下面以出国为例，回国原理应该也一样。&lt;/p&gt;
-&lt;p&gt;首先，假设公
-      
-    
-    </summary>
-    
-    
-      <category term="计算机网络" scheme="http://yoursite.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>D 类地址向以太网多播地址的映射的目的</title>
