@@ -292,6 +292,72 @@ ga('send', 'pageview');
     </script>
 
     
+        
+    <div class="widget-wrap" id="toc">
+        <h3 class="widget-title">
+            <span>目录</span>
+            &nbsp;
+            <a id="tocExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+     <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-从逻辑代数开始"><span class="toc-text">1. 从逻辑代数开始</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-从逻辑代数到命题逻辑"><span class="toc-text">2. 从逻辑代数到命题逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-浅谈数理逻辑与数学和逻辑学"><span class="toc-text">2.1 浅谈数理逻辑与数学和逻辑学</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-命题逻辑的符号化思想"><span class="toc-text">2.2 命题逻辑的符号化思想</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-从命题逻辑到一阶逻辑"><span class="toc-text">3. 从命题逻辑到一阶逻辑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-从一阶逻辑到二阶、高阶逻辑"><span class="toc-text">4. 从一阶逻辑到二阶、高阶逻辑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-题外话"><span class="toc-text">5. 题外话</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-感谢文章"><span class="toc-text">6. 感谢文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后记"><span class="toc-text">后记</span></a></li></ol>
+ </div>
+ 
+ <script>
+     // 添加小图标
+     var $itemHasChild = $("#toc .toc-item:has(> .toc-child)");
+     var $titleHasChild = $itemHasChild.children(".toc-link");
+     $itemHasChild.prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i>");
+     var $opentoc = $(".toc-item > .fa-caret-down");
+     var $closetoc = $(".toc-item > .fa-caret-right");
+     $closetoc.addClass("hide").hide();
+ 
+     // 点击小图标
+     var clickIcon = function(){
+         $("#toc .toc-item > i").click(function(){
+             $(this).hide();
+             $(this).siblings(".toc-child").slideToggle(100);
+             $(this).toggleClass("hide");
+             $(this).siblings("i").toggleClass("hide");
+             if( $(this).siblings("i").hasClass("hide") ){
+                    // 执行隐藏
+                    $(this).siblings("i").hide();
+                }else{
+                    // 显示
+                    $(this).siblings("i").show();
+                }
+         })
+     }()
+ 
+     // 展开关闭所有目录
+     var clickTocTitle = function(){
+         var $subToc = $titleHasChild.next(".toc-child");
+         var $tocTitle = $("#tocExpand");
+         var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+         // 当包含多级目录时再执行
+         if ($titleHasChild.length) {
+             $tocTitle.addClass("clickable");
+             $tocTitle.click(function(){
+                 var icon = $(this).children('.fa');
+                 if ($subToc.is(":hidden")) {
+                     $subToc.show(100);
+                     $closetoc.addClass("hide").hide();
+                     $opentoc.removeClass("hide").show();
+                     icon.removeClass(iconAllPackClass).addClass(iconAllExpandClass);
+                 } else {
+                     $subToc.hide(100);
+                     $opentoc.addClass("hide").hide();
+                     $closetoc.removeClass("hide").show();
+                     icon.removeClass(iconAllExpandClass).addClass(iconAllPackClass);
+                 }
+             })
+         }
+     }()
+    </script>
+
+    
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
@@ -348,12 +414,7 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
         
-            
-                <div id="toc" class="toc-article">
-                <strong class="toc-title">文章目录</strong>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-从逻辑代数开始"><span class="toc-text">1. 从逻辑代数开始</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-从逻辑代数到命题逻辑"><span class="toc-text">2. 从逻辑代数到命题逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-浅谈数理逻辑与数学和逻辑学"><span class="toc-text">2.1 浅谈数理逻辑与数学和逻辑学</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-命题逻辑的符号化思想"><span class="toc-text">2.2 命题逻辑的符号化思想</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-从命题逻辑到一阶逻辑"><span class="toc-text">3. 从命题逻辑到一阶逻辑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-从一阶逻辑到二阶、高阶逻辑"><span class="toc-text">4. 从一阶逻辑到二阶、高阶逻辑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-题外话"><span class="toc-text">5. 题外话</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-感谢文章"><span class="toc-text">6. 感谢文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后记"><span class="toc-text">后记</span></a></li></ol>
-                </div>
-            
+
         
         
             <h2 id="前言">前言</h2>
